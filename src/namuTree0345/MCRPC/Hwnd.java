@@ -86,6 +86,7 @@ public class Hwnd {
 	                
 	                 MCRPC.mc.setHwndNum(hWnd);
 	                 MCRPC.mc.setWindowTxt(wText);
+	                 MCRPC.mc.setClassName(clsName);
 	                 
 	                 System.out.println(
 	                          "hwnd:"+hWnd+","+

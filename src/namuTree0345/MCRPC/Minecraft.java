@@ -11,6 +11,7 @@ public class Minecraft {
 	
 	private HWND hwnd;
 	private String windowTxt;
+	private String ClassName;
 	
 	
 	public boolean isRunning() {
@@ -49,5 +50,12 @@ public class Minecraft {
 	public void setHwndNum(HWND hWnd) {
 		this.hwnd = hWnd;
 	}
+	public String getGLClassName() {
+		return ClassName;
+	}
+	public void setClassName(String className) {
+		ClassName = className;
+	}
+	
 
 }

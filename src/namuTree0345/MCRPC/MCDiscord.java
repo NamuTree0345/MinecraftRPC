@@ -44,5 +44,9 @@ public class MCDiscord {
 	public static void RpcClear() {
 		lib.Discord_ClearPresence();
 	}
+	
+	public static void RemovePre() {
+		lib.Discord_Shutdown();
+	}
 
 }

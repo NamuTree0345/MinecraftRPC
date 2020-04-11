@@ -71,34 +71,42 @@ public class MCRPC extends JFrame {
         while(true) {
         	
         	if (loopCheck.isSelected()) {
-        		if(checker.checkMC()) {
+        		
+        		//boolean check = checker.checkMC();
+        		//boolean cn = mc.getGLClassName() == "GLFW30";
+        		
+        		if(checker.checkMC() && mc.getGLClassName() == "GLFW30") {
         			
-        			if (!isRPCCreated) {
-        				System.out.println("Playing New MC.");
-        				MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
-        				isRPCCreated = true;
-    				} else {}
         			
-        			/*switch(checker.getMCType(mc)) {
-        			case VANILLA:
-        				if (!isRPCCreated) {
-	        				System.out.println("Playing New MC.");
-	        				MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
-	        				isRPCCreated = true;
-        				} else {}
-        			case VANILLA_LEGACY:
-        				if (!isRPCCreated) {
-	        				System.out.println("Playing Old MC.");
-	        				MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
-	        				isRPCCreated = true;
-        				} else {}
-        			}*/
-        		} else {
-        			if(isRPCCreated) {
-        				MCDiscord.RpcClear();
-        				isRPCCreated = false;
-        			}
-        		}
+		        	if (!isRPCCreated) {
+		        		System.out.println("Playing New MC.");
+		        		MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
+		        		isRPCCreated = true;
+		        		System.out.println("CN: " + mc.getGLClassName());
+		    		} else {}
+		        			
+		        			/*switch(checker.getMCType(mc)) {
+		        			case VANILLA:
+		        				if (!isRPCCreated) {
+			        				System.out.println("Playing New MC.");
+			        				MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
+			        				isRPCCreated = true;
+		        				} else {}
+		        			case VANILLA_LEGACY:
+		        				if (!isRPCCreated) {
+			        				System.out.println("Playing Old MC.");
+			        				MCDiscord.RpcCreate("698421368684937237", "마인크래프트 플레이중!", mc.getWindowTxt(), "bigimg", "smallimg", "마인크래프트 플레이중", mc.getWindowTxt());
+			        				isRPCCreated = true;
+		        				} else {}
+		        			}*/
+		        			
+		        	System.out.println("CN: " + mc.getGLClassName());
+		     	} else {
+		        	if(isRPCCreated) {
+		        		MCDiscord.RpcClear();
+		        		isRPCCreated = false;
+		        	}
+		        }
         	}
         	
         }
